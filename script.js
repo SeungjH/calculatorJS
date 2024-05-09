@@ -4,19 +4,20 @@ const display = document.getElementById("display");
 //appendToDisplay, calcualte, clearDisplay
 
 function appendToDisplay(input) {
-  display.textContent += input;
+  display.value += input;
 }
 
 function calculate() {
-  try {
-    display.textContent = eval(display.textContent);
-  } catch (error) {
-    display.textContent = "Error";
+  try{
+    display.value = eval(display.value);
+  }
+  catch(error){
+    display.value="error";
   }
 }
 
 function clearDisplay() {
-  display.textContent = "";
+  display.value = "";
 }
 
 //Add event listeners to the buttons
