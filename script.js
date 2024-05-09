@@ -20,6 +20,11 @@ function clearDisplay() {
   display.value = "";
 }
 
+//if operator is clicked, highlight selected operator, clear display and store value
+//if equals is clicked, calculate and display result
+function onClickOperator{
+  
+}
 //Add event listeners to the buttons
 
 const buttons = document.querySelectorAll("button");
