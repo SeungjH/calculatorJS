@@ -2,6 +2,8 @@ const display = document.getElementById("display");
 
 var operatorSet = new Set(["+", "-", "/", "*"]);
 
+var isEqualClicked = false;
+
 //Three functions to create: 
 //appendToDisplay, calcualte, clearDisplay
 
@@ -25,6 +27,13 @@ function clearDisplay() {
 function handleClick(){
   //does nothing
 }
+function function1(){
+  //resetting screen if user inputs after the result
+  if(isEqualClicked === true){
+    display.value = "";
+    isEqualClicked = false;
+  }
+}
 
 //if operator is clicked, highlight selected operator, clear display and store value
 //if equals is clicked, calculate and display result
@@ -46,7 +55,7 @@ function onClick(){
 }
 //resets the display if the previous calcualtion is finished and the user starts another calculation
 function resetScreen(){
-  
+  isEqualClicked = true;
   //display.addEventListener("input", ());
 }
 
